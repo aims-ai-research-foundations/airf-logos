@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t">
+  <title id="t">AI Research Foundations — ascending-staircase A</title>
+  <g fill="none" stroke="#4A2F7A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- LEFT stroke: ascending staircase (4 rises) up to the summit -->
+    <path d="M28 98 V80 H44 V62 H60 V44"/>
+    <!-- RIGHT stroke: straight diagonal from apex to base -->
+    <path d="M76 26 L100 98"/>
+    <!-- crossbar: meets the left riser at a single point -->
+    <path d="M60 53 H85"/>
+  </g>
+  <!-- summit step: the single gold accent -->
+  <path d="M60 44 H76 V26" fill="none" stroke="#F6C63C" stroke-width="9"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

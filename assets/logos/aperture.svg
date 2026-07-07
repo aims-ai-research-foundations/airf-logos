@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="apG" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#D69E1C"/>
+      <stop offset="1" stop-color="#F6C63C"/>
+    </linearGradient>
+  </defs>
+  <!-- right leg plane (far, mid shade) -->
+  <polygon points="110,107 76,15 52,25 86,117" fill="#4A2F7A" fill-opacity="1"/>
+  <!-- left leg plane (near, lit) leans across -->
+  <polygon points="18,107 52,15 76,25 42,117" fill="#6B4CA6" fill-opacity="1"/>
+  <!-- convergence gem where the planes overlap: two facets deepen -->
+  <polygon points="64,20 52,25 64,58" fill="#331F57" fill-opacity="1"/>
+  <polygon points="64,20 76,25 64,58" fill="#241539" fill-opacity="1"/>
+  <!-- gem crest catches the light (luminous convergence) -->
+  <polygon points="64,20 56,25 64,40" fill="#8368B0" fill-opacity="1"/>
+  <!-- crossbar: front face + lower edge for plane thickness -->
+  <polygon points="40,80 88,80 88,88 40,88" fill="#5F4299" fill-opacity="1"/>
+  <polygon points="40,88 88,88 88,92 40,92" fill="#33205A" fill-opacity="1"/>
+  <!-- aperture of insight: two-tone gold glowing in the counter -->
+  <polygon points="64,60 72,79 56,79" fill="url(#apG)" fill-opacity="1"/>
+  <polygon points="64,66 69,78 59,78" fill="#FFE79A" fill-opacity="1"/>
+  <!-- apex spark: gold crowns the convergence -->
+  <polygon points="64,9 68,17 64,25 60,17" fill="#F6C63C" fill-opacity="1"/>
+</svg>
