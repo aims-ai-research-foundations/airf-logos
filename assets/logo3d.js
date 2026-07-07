@@ -29,7 +29,7 @@
     const R = Math.max(s.x, s.y) * 0.5 || 100;
 
     const cam = new THREE.PerspectiveCamera(32, 1, 1, R * 80);
-    cam.position.set(0, R * 0.12, R * 4.7); cam.lookAt(0, 0, 0);
+    cam.position.set(0, R * 0.1, R * 5.7); cam.lookAt(0, 0, 0); // pull back so rotating marks never crop
     scene.add(new THREE.AmbientLight(0xffffff, 0.74));
     const k = new THREE.DirectionalLight(0xffffff, 0.95); k.position.set(-1, 1.35, 1.4); scene.add(k);
     const f = new THREE.DirectionalLight(0xcdb8ff, 0.35); f.position.set(1.2, 0.1, -0.9); scene.add(f);
