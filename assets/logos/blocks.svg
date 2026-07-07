@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+  <title id="t">AI Research Foundations — ascending staircase A</title>
+  <!-- palette: purple light #6B4CA6 mid #4A2F7A dark #331F57 ink #241539 gold #F6C63C -->
+
+  <!-- RIGHT leg: clean solid bar from summit to bottom-right -->
+  <polygon points="296,176 336,176 452,440 366,440" fill="#331F57"/>
+
+  <!-- CROSSBAR: strong dark structural bar tying the legs -->
+  <polygon points="152,306 372,306 392,378 132,378" fill="#241539"/>
+
+  <!-- LEFT leg: ascending staircase of bold blocks (bottom-left up to summit) -->
+  <polygon points="60,440 176,440 200,352 84,352" fill="#4A2F7A"/>
+  <polygon points="112,352 228,352 252,264 136,264" fill="#5A3C93"/>
+  <polygon points="164,264 280,264 304,176 188,176" fill="#6B4CA6"/>
+
+  <!-- SUMMIT: peaked gold block — the apex + achievement mass -->
+  <polygon points="240,72 288,72 336,176 200,176" fill="#F6C63C"/>
+</svg>
