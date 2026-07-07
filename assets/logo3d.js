@@ -6,19 +6,22 @@
   }
   function init(canvas, svgText) {
     const THREE = g.THREE;
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, logarithmicDepthBuffer: true });
     renderer.setPixelRatio(Math.min(g.devicePixelRatio || 1, 2));
     const scene = new THREE.Scene();
     const vb = vbSize(svgText);
     const depth = Math.max(6, 0.11 * Math.min(vb.w, vb.h));
     const data = new THREE.SVGLoader().parse(svgText);
     const grp = new THREE.Group();
-    data.paths.forEach(p => {
+    const zStep = Math.max(0.5, depth * 0.05); // stagger each path in paint order so coplanar faces never z-fight (blink)
+    data.paths.forEach((p, i) => {
       const col = p.color ? p.color : new THREE.Color('#6B4CA6');
-      const mat = new THREE.MeshStandardMaterial({ color: col, roughness: 0.5, metalness: 0.16, side: THREE.DoubleSide });
+      const mat = new THREE.MeshStandardMaterial({ color: col, roughness: 0.5, metalness: 0.16, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -1 - i, polygonOffsetUnits: -1 - i });
       (p.toShapes(true) || []).forEach(sh => {
         const geo = new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: true, bevelThickness: depth * 0.12, bevelSize: depth * 0.09, bevelSegments: 2, curveSegments: 14 });
-        grp.add(new THREE.Mesh(geo, mat));
+        const mesh = new THREE.Mesh(geo, mat);
+        mesh.position.z = i * zStep;
+        grp.add(mesh);
       });
     });
     grp.scale.y = -1; // SVG y-down -> Three y-up
